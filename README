@@ -3,3 +3,38 @@ http://vision.princeton.edu/projects/2010/SUN/SUN397.tar.gz
 http://www.freenos.org/doxygen/index.html
 https://objectkuan.gitbooks.io/ucore-docs/index.html
 https://github.com/shadowsocks/shadowsocks-libev
+
+//双击运行即可  linux下使用
+https://github.com/shadowsocks/shadowsocks-qt5/releases 发行版
+
+
+配置命令行 使用代理  使用软件 polipo
+// 安装polipo
+sudo apt-get install polipo
+// 配置polipo
+sudo vim /etc/polipo/config
+/**
+修改配置文件
+socksParentProxy = "localhost:1080"
+socksProxyType = socks5
+logFile=/var/log/polipo
+logLevel=4
+
+// 重启polipo
+sudo service polipo stop
+sudo service polipo start
+
+//然后在命令行临时使用
+http_proxy=http://localhost:8123 curl ip.gs 
+//或者使用 进行测试
+http_proxy=http://localhost:8123 curl google.com
+
+// 在git下载时候使用，速度是否可观
+git config --global http.proxy=localhost:8123
+
+
+// 长期使用，如果使用的是zsh的配置文件在～/.zshrc  如果是bash 则是 ～/.bashrc
+alias gp="config --global http.proxy=http://localhost:8123"
+alias hp="http_proxy=http://localhost:8123"
+// 下一步生效即可
+source ~/.zshrc // 或者source ～/.bashrc
