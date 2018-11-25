@@ -1,0 +1,11 @@
+{
+    "server":"104.225.144.229",
+    "server_port":8003,
+    "local_port":1080,
+    "password":"lijun123",
+    "method":"rc4-md5",
+    "plugin": "",
+    "plugin_opts": "",
+    "remarks": "gce",
+    "timeout":300
+}
