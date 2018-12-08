@@ -36,7 +36,7 @@ http_proxy=http://localhost:8123 curl google.com
 // 在git下载时候使用，速度是否可观
 git config --global http.proxy=localhost:8123
 
-
+  
 // 长期使用，如果使用的是zsh的配置文件在～/.zshrc  如果是bash 则是 ～/.bashrc
 alias gp="config --global http.proxy=http://localhost:8123"
 alias hp="http_proxy=http://localhost:8123"
