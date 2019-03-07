@@ -1,0 +1,4 @@
+ALL_PROXY=socks://127.0.0.1:1080/
+no_proxy=localhost,127.0.0.0/8,::1
+NO_PROXY=localhost,127.0.0.0/8,::1
+all_proxy=socks://127.0.0.1:1080/
